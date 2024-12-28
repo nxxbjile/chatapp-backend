@@ -11,7 +11,7 @@ const { Room } = require("./src/models/rooms");
 dotenv.config();
 
 const corsOptions = {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
     methods:"GET, POST, PUT, DELETE",
     credentials:true,
 }
@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "*", // Replace with specific origins if necessary
+        origin: process.env.CLIENT_URL, // Replace with specific origins if necessary
         methods: "GET, POST, DELETE, PUT",
     },
     transports: ['polling', 'websocket'],
