@@ -26,6 +26,6 @@ ChatApp backend is the **Backend** part of the **ChatApp web app** which is a Ch
 
 
 # Project live on
-> 
+> https://hr-chatapp.netlify.app
 
 ### thats it, enjoy.

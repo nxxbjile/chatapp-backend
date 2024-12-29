@@ -24,6 +24,7 @@ const io = new Server(server, {
     cors: {
         origin: process.env.CLIENT_URL, // Replace with specific origins if necessary
         methods: "GET, POST, DELETE, PUT",
+        credentials:true,
     },
     transports: ['polling', 'websocket'],
 });
